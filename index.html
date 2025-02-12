@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-blue-100 flex justify-center items-center min-h-screen">
+    <div class="w-full max-w-4xl bg-white rounded-lg shadow-md p-6">
+        <h1 class="text-2xl font-bold text-center text-white bg-blue-500 py-3 rounded">Weather Dashboard</h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+            <!-- Search Section -->
+            <div class="col-span-1 bg-blue-100 p-4 rounded">
+                <label class="block font-bold mb-2">Enter a City Name</label>
+                <input id="searchInput" type="text" placeholder="E.g., New York, London, Tokyo" class="w-full p-2 border border-gray-300 rounded mb-2">
+                <button id="searchButton" class="w-full bg-blue-500 text-white p-2 rounded">Search</button>
+                <div class="text-center my-2">or</div>
+                <button id="locationButton" class="w-full bg-gray-700 text-white p-2 rounded">Use Current Location</button>
+            </div>
+            
+            <!-- Weather Display -->
+            <div class="col-span-2">
+                <div id="weatherContainer" class="bg-blue-500 text-white p-4 rounded-lg flex justify-between items-center">
+                    <div>
+                        <h2 class="text-xl font-bold" id="cityName">City Name (Date)</h2>
+                        <p>Temperature: <span id="temperature">--</span>°C</p>
+                        <p>Wind: <span id="windSpeed">--</span> M/S</p>
+                        <p>Humidity: <span id="humidity">--</span></p>
+                    </div>
+                    <div>
+                        <img id="weatherIcon" src="" alt="Weather Icon" class="w-16 h-16">
+                        <p id="weatherDescription">Condition</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 5-Day Forecast -->
+        <h2 class="text-xl font-bold mt-4">5-Day Forecast</h2>
+        <div id="forecastContainer" class="grid grid-cols-1 md:grid-cols-5 gap-4 mt-2">
+            <div class="bg-gray-300 text-center p-3 rounded">
+                <h3>(Date)</h3>
+                <img src="" alt="Weather Icon" class="mx-auto w-12 h-12">
+                <p>Temp: --°C</p>
+                <p>Wind: -- M/S</p>
+                <p>Humidity: --%</p>
+            </div>
+            <div class="bg-gray-300 text-center p-3 rounded">
+                <h3>(Date)</h3>
+                <img src="" alt="Weather Icon" class="mx-auto w-12 h-12">
+                <p>Temp: --°C</p>
+                <p>Wind: -- M/S</p>
+                <p>Humidity: --%</p>
+            </div>
+            <div class="bg-gray-300 text-center p-3 rounded">
+                <h3>(Date)</h3>
+                <img src="" alt="Weather Icon" class="mx-auto w-12 h-12">
+                <p>Temp: --°C</p>
+                <p>Wind: -- M/S</p>
+                <p>Humidity: --%</p>
+            </div>
+            <div class="bg-gray-300 text-center p-3 rounded">
+                <h3>(Date)</h3>
+                <img src="" alt="Weather Icon" class="mx-auto w-12 h-12">
+                <p>Temp: --°C</p>
+                <p>Wind: -- M/S</p>
+                <p>Humidity: --%</p>
+            </div>
+            <div class="bg-gray-300 text-center p-3 rounded">
+                <h3>(Date)</h3>
+                <img src="" alt="Weather Icon" class="mx-auto w-12 h-12">
+                <p>Temp: --°C</p>
+                <p>Wind: -- M/S</p>
+                <p>Humidity: --%</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
